@@ -1,0 +1,59 @@
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "apt-transport-https"
+
+- name: add influxdb repo key
+  apt_key:
+    url: "https://repos.influxdata.com/influxdb.key"
+    state: present
+
+- name: add influxdb repo list
+  apt_repository:
+    repo: deb https://repos.influxdata.com/debian jessie stable
+    state: present
+    update_cache: yes
+
+- name: install influxdb
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "influxdb"
+    - "telegraf"
+    - "chronograf"
+    - "kapacitor"
+
+- name: start influxdb
+  service:
+    name: influxdb
+    state: started
+
+- name: create telegraf config
+  template:
+    src: telegraf.j2
+    dest: "/etc/telegraf.conf"
+  with_items: "{{ influxdb_servers | list }}"
+  notify: reload telegraf
+
+- name: create edgerouter snmp telegraf configs
+  #msg: "User {{ item.key }} is {{ item.value.ip }} ({{ item.value.whatever }})"
+  template:
+    src: edgerouter_snmp.j2
+    dest: "/etc/telegraf/telegraf.d/edgerouter_{{ item.key }}.conf"
+  with_dict: "{{ edgerouters }}"
+  notify: reload telegraf
+  
+- name: create unifi snmp telegraf configs
+  template:
+    src: unifi_snmp.j2
+    dest: "/etc/telegraf/telegraf.d/unifi_{{ item.key }}.conf"
+  with_dict: "{{ edgerouters }}"
+  notify: reload telegraf
+
+
+
+

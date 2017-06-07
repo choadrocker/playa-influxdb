@@ -1,0 +1,6 @@
+---
+- hosts: vagrant
+  become: yes
+  roles:
+    - influxdb
+
