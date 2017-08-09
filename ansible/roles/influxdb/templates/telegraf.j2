@@ -16,6 +16,8 @@
 [[outputs.influxdb]]
   urls = ["http://{{ item }}:8086"] # required
   database = "telegraf" # required
+	username = "{{ influx_username }}"
+	password = "{{ influx_password }}"
   retention_policy = ""
   write_consistency = "any"
   timeout = "5s"
