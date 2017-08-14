@@ -5,6 +5,7 @@
     state: present
   with_items:
     - "apt-transport-https"
+    - "snmp"
 
 - name: add influxdb repo key
   apt_key:
@@ -35,7 +36,7 @@
 - name: create telegraf config
   template:
     src: telegraf.j2
-    dest: "/etc/telegraf.conf"
+    dest: "/etc/telegraf/telegraf.conf"
   with_items: "{{ influxdb_servers | list }}"
   notify: reload telegraf
 

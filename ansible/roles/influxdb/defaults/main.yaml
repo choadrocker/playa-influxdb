@@ -1,7 +1,7 @@
 ---
 # no secrets here!
 
-influxdb_servers: ['10.10.10.10', '10.10.20.10']
+influxdb_servers: ['127.0.0.1', 'influx.burningman.org']
 
 edgerouters:
   # 162.212.150.10:
@@ -231,4 +231,3 @@ edgerouters:
 
   westwing:
     ip: 162.212.145.99
-
