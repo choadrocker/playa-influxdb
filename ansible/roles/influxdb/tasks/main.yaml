@@ -46,14 +46,10 @@
     dest: "/etc/telegraf/telegraf.d/edgerouter_{{ item.key }}.conf"
   with_dict: "{{ edgerouters }}"
   notify: reload telegraf
-  
-- name: create unifi snmp telegraf configs
-  template:
-    src: unifi_snmp.j2
-    dest: "/etc/telegraf/telegraf.d/unifi_{{ item.key }}.conf"
-  with_dict: "{{ edgerouters }}"
-  notify: reload telegraf
 
-
-
-
+#- name: create unifi snmp telegraf configs
+#  template:
+#    src: unifi_snmp.j2
+#    dest: "/etc/telegraf/telegraf.d/unifi_{{ item.key }}.conf"
+#  with_dict: "{{ edgerouters }}"
+#  notify: reload telegraf

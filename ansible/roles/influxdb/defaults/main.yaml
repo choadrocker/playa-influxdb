@@ -4,16 +4,231 @@
 influxdb_servers: ['10.10.10.10', '10.10.20.10']
 
 edgerouters:
-  artery01:
-    ip: 192.168.1.10
-    unifis: ['10.100.100.1', '10.100.200.1', '10.10.10.100']
-  artery02:
-    ip: 192.168.1.11
-    unifis: ['10.100.100.1']
-  cafe01:
-    ip: 192.168.1.20
-    unifis: ['10.100.100.22']
-  cafe02:
-    ip: 192.168.1.21
-    unifis: ['10.100.100.34']
+  # 162.212.150.10:
+  #   ip: 162.212.150.10
+  #   #unifis: ['10.100.100.1', '10.100.200.1', '10.10.10.100']
+  # artery02:
+  #   ip: 192.168.1.11
+  #   #unifis: ['10.100.100.1']
+  # cafe01:
+  #   ip: 192.168.1.20
+  #   #unifis: ['10.100.100.22']
+  # cafe02:
+  #   ip: 192.168.1.21
+  #   #unifis: ['10.100.100.34']
+
+  shower:
+    ip: 162.212.150.10
+  noc:
+    ip: 162.212.150.11
+  depot:
+    ip: 162.212.150.12
+
+
+  accounting:
+    ip: 162.212.145.30
+
+  airport:
+    ip: 162.212.145.31
+
+  airport-box:
+    ip: 162.212.145.32
+
+  airport-gpe:
+    ip: 162.212.145.33
+
+  arctica:
+    ip: 162.212.145.34
+
+  artery:
+    ip: 162.212.145.35
+
+  blm-liason:
+    ip: 162.212.145.36
+
+  blue-oasis:
+    ip: 162.212.145.37
+
+  bmir:
+    ip: 162.212.145.38
+
+  bmir-routable:
+    ip: 162.212.145.39
+
+  boob:
+    ip: 162.212.145.40
+
+  box:
+    ip: 162.212.145.41
+
+  box-dlot:
+    ip: 162.212.145.42
+
+  box-gpe:
+    ip: 162.212.145.43
+
+  box-sat:
+    ip: 162.212.145.44
+
+  brcmap:
+    ip: 162.212.145.45
+
+  beair:
+    ip: 162.212.145.46
+
+  bebus:
+    ip: 162.212.145.47
+
+  cafe:
+    ip: 162.212.145.48
+
+  cafevillage:
+    ip: 162.212.145.49
+
+  cat:
+    ip: 162.212.145.50
+
+  chaos:
+    ip: 162.212.145.51
+
+  commissary:
+    ip: 162.212.145.52
+
+  dmv:
+    ip: 162.212.145.54
+
+  dmv-routable:
+    ip: 162.212.145.55
+
+  environment:
+    ip: 162.212.145.56
+
+  eoc:
+    ip: 162.212.145.57
+
+  esd3:
+    ip: 162.212.145.58
+
+  esd5:
+    ip: 162.212.145.59
+
+  esd73:
+    ip: 162.212.145.60
+
+  esd9:
+    ip: 162.212.145.61
+
+  esdcomm:
+    ip: 162.212.145.62
+
+  esdcomm-routable:
+    ip: 162.212.145.63
+
+  esdmed:
+    ip: 162.212.145.64
+
+  fck:
+    ip: 162.212.145.65
+
+  firstcamp:
+    ip: 162.212.145.66
+
+  fusionvalley:
+    ip: 162.212.145.67
+
+  geeklandia:
+    ip: 162.212.145.68
+
+  ghetto:
+    ip: 162.212.145.69
+
+  gpe-blackhole:
+    ip: 162.212.145.70
+
+  heat:
+    ip: 162.212.145.71
+
+  hellstation:
+    ip: 162.212.145.72
+
+  housing:
+    ip: 162.212.145.73
+
+  hr:
+    ip: 162.212.145.74
+
+  laminates:
+    ip: 162.212.145.75
+
+  lighthouse:
+    ip: 162.212.145.76
+
+  manbase:
+    ip: 162.212.145.77
+
+  mediamecca:
+    ip: 162.212.145.78
+
+  point1:
+    ip: 162.212.145.79
+
+  point1-box:
+    ip: 162.212.145.80
+
+  playainfo:
+    ip: 162.212.145.81
+
+  playainfo-routable:
+    ip: 162.212.145.82
+
+  poopdudes:
+    ip: 162.212.145.83
+
+  power:
+    ip: 162.212.145.84
+
+  outpost0:
+    ip: 162.212.145.85
+
+  ranger3:
+    ip: 162.212.145.86
+
+  ranger9:
+    ip: 162.212.145.87
+
+  rangerhq:
+    ip: 162.212.145.88
+
+  rangerhq-routable:
+    ip: 162.212.145.89
+
+  resto:
+    ip: 162.212.145.90
+
+  sawdust:
+    ip: 162.212.145.91
+
+  spa:
+    ip: 162.212.145.92
+
+  spm:
+    ip: 162.212.145.93
+
+  nvproperties:
+    ip: 162.212.145.94
+
+  temple:
+    ip: 162.212.145.95
+
+  trafficops:
+    ip: 162.212.145.96
+
+  webcast:
+    ip: 162.212.145.97
+
+  webcast-routable:
+    ip: 162.212.145.98
+
+  westwing:
+    ip: 162.212.145.99
 
